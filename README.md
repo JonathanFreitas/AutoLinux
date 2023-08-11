@@ -1,6 +1,6 @@
 # AutoLinux
 
-Autor: Jonathan Freitas \n
+Autor: Jonathan Freitas 
 Versao: BETA
 
 
