@@ -8,68 +8,129 @@ echo "" >  /etc/yum.repos.d/CentOS-Base.repo
 
 Sobrescrever com:
 ##########################################################
-[base]
 
-name=CentOS-$releasever - Base
-
-baseurl=https://vault.centos.org/6.10/os/$basearch/
-
+[C6.10-base]
+name=CentOS-6.10 - Base
+baseurl=http://vault.centos.org/6.10/os/$basearch/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+enabled=1
+metadata_expire=never
 
-gpgkey=https://vault.centos.org/6.10/os/$basearch//RPM-GPG-KEY-CentOS-6
-
-#released updates 
-
-[updates]
-
-name=CentOS-$releasever - Updates
-
-baseurl=https://vault.centos.org/6.10/updates/$basearch/
-
+[C6.10-updates]
+name=CentOS-6.10 - Updates
+baseurl=http://vault.centos.org/6.10/updates/$basearch/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+enabled=1
+metadata_expire=never
 
-gpgkey=https://vault.centos.org/6.10/updates/$basearch//RPM-GPG-KEY-CentOS-6
-
-
-#additional packages that may be useful
-
-[extras]
-
-name=CentOS-$releasever - Extras
-
-baseurl=https://vault.centos.org/6.10/extras/$basearch/
-
+[C6.10-extras]
+name=CentOS-6.10 - Extras
+baseurl=http://vault.centos.org/6.10/extras/$basearch/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+enabled=1
+metadata_expire=never
 
-gpgkey=https://vault.centos.org/6.10/extras/$basearch//RPM-GPG-KEY-CentOS-6
-
-#additional packages that extend functionality of existing packages
-
-[centosplus]
-
-name=CentOS-$releasever - Plus
-
-baseurl=https://vault.centos.org/6.10/centosplus/$basearch/
-
+[C6.10-contrib]
+name=CentOS-6.10 - Contrib
+baseurl=http://vault.centos.org/6.10/contrib/$basearch/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+enabled=0
+metadata_expire=never
 
-gpgkey=https://vault.centos.org/6.10/centosplus/$basearch//RPM-GPG-KEY-CentOS-6
-
-
-#contrib - packages by Centos Users
-
-[contrib]
-
-name=CentOS-$releasever - Contrib
-
-baseurl=https://vault.centos.org/6.10/contrib/$basearch/
-
+[C6.10-centosplus]
+name=CentOS-6.10 - CentOSPlus
+baseurl=http://vault.centos.org/6.10/centosplus/$basearch/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+enabled=0
+metadata_expire=never
 
-gpgkey=https://vault.centos.org/6.10/contrib/$basearch//RPM-GPG-KEY-CentOS-6
 
 ################################################################
+Possivel erro baseurl=http://mirror.centos.org/centos/6/sclo/$basearch/sclo/
 
+CORREÇAO
+###############################################################
+# CentOS-SCLo-sclo.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
+# information
+
+[centos-sclo-sclo]
+name=CentOS-6 - SCLo sclo
+baseurl=http://vault.centos.org/centos/6/sclo/$basearch/sclo/
+#baseurl=http://mirror.centos.org/centos/6/sclo/$basearch/sclo/
+#mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=6&repo=sclo-sclo
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-sclo-testing]
+name=CentOS-6 - SCLo sclo Testing
+baseurl=http://buildlogs.centos.org/centos/6/sclo/$basearch/sclo/
+gpgcheck=0
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-sclo-source]
+name=CentOS-6 - SCLo sclo Sources
+baseurl=http://vault.centos.org/centos/6/sclo/Source/sclo/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-sclo-debuginfo]
+name=CentOS-6 - SCLo sclo Debuginfo
+baseurl=http://debuginfo.centos.org/centos/6/sclo/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+
+
+##################################################################
+
+# CentOS-SCLo-rh.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
+# information
+
+[centos-sclo-rh]
+name=CentOS-6 - SCLo rh
+baseurl=http://vault.centos.org/centos/6/sclo/$basearch/rh/
+#mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=6&repo=sclo-rh
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-rh-testing]
+name=CentOS-6 - SCLo rh Testing
+#baseurl=http://buildlogs.centos.org/centos/6/sclo/$basearch/rh/
+baseurl=http://buildlogs.centos.org/centos/6/sclo/$basearch/rh
+gpgcheck=0
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-rh-source]
+name=CentOS-6 - SCLo rh Sources
+baseurl=http://vault.centos.org/centos/6/sclo/Source/rh/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-rh-debuginfo]
+name=CentOS-6 - SCLo rh Debuginfo
+baseurl=http://debuginfo.centos.org/centos/6/sclo/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+
+###################################################################
 yum clean all
 
 yum update
