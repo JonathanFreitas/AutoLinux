@@ -1,0 +1,9 @@
+PATH para importar a chave publica ssh-rsa
+touch ~/.ssh/authorized_keys
+
+echo "{colocar chave publica ssh-rsa}" >> ~/.ssh/authorized_keys
+
+chmod 400 chave_privada.pem
+
+ssh -i chave_privada.pem
+scp -i chave privada.pem
