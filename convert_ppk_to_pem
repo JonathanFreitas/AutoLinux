@@ -1,0 +1,9 @@
+First, make sure that the putty-tools package is installed on your system. You can install it using your package manager, such as apt or yum, or you can download and install it manually from the PuTTY website (https://www.putty.org/).
+sudo apt install putty-tools 
+Open a terminal window and navigate to the directory where the PPK file is stored.
+Run the following command to convert the PPK file to a PEM file:
+puttygen ppk_file.ppk -O private-openssh -o pem_file.pem 
+Replace `ppk_file.ppk` with the name of your PPK file and `pem_file.pem` with the desired name for the PEM file.
+
+
+chmod 400 pem_file.pem 
