@@ -1,0 +1,6 @@
+cat <<-EOF > ./eofoutput.txt
+this is testing EOF with indent
+this is testing EOF with indent
+these lines wanted to be without leading indent
+these lines wanted to be without leading indent
+EOF
