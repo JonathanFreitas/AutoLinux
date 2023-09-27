@@ -19,4 +19,4 @@ docker rmi $(docker images -q)
 EOF
 chmod 777 /scripts/remove_images_docker.sh
 
-(crontab -l; echo "0 22 * * * /scripts/remove_images_docker.sh >/dev/null 2>&1") | sort -u | crontab -
+ { crontab -l; echo "0 23 * * * /scripts/remove_images_docker.sh >/dev/null 2>&1"; } | crontab -
