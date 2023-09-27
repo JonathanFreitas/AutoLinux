@@ -8,12 +8,12 @@ Versao: BETA
 Desenvolvido para atenter instalações recorrentes, de forma pratica e automatizada!
 
 Como Usar:
-curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/hello_world.sh | bash
+<pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/hello_world.sh | bash </pre>
 
 
 Exemplos:
 Instalar Docker Ultima Versao:
-<mark> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash </mark>
+<pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash </pre>
 
  Instalar Clean Images Docker:
  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash
