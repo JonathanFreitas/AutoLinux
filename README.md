@@ -16,7 +16,7 @@ Instalar Docker Ultima Versao:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash </pre>
 
  Instalar Clean Images Docker:
- curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash
+ <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash </pre>
  
 
 
