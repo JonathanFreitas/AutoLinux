@@ -2,7 +2,7 @@
 echo -n "Quantos GB de RAM: "
 read valor
 mkdir /var/swap
-fallocate -l $valor /var/swap/swapfile
+fallocate -l $valor GB /var/swap/swapfile
 chmod 600 /var/swap/swapfile
 mkswap /var/swap/swapfile
 swapon  /var/swap/swapfile
