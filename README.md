@@ -11,7 +11,13 @@ Como Usar:
 curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/hello_world.sh | bash
 
 
+Exemplos:
+Instalar Docker Ultima Versao:
+ curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash
 
+ Instalar Clean Images Docker:
+ curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash
+ 
 
 
 A automação desempenha um papel vital na otimização e melhoria de processos em diversas áreas. 
