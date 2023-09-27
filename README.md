@@ -13,7 +13,7 @@ curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/hello_w
 
 Exemplos:
 Instalar Docker Ultima Versao:
-<p> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash </p>
+<h1> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ubuntu_install_docker.sh | bash </h1>
 
  Instalar Clean Images Docker:
  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash
