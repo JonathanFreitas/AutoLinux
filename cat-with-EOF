@@ -1,3 +1,4 @@
+#!/bin/bash
 cat <<-EOF > ./eofoutput.txt
 this is testing EOF with indent
 this is testing EOF with indent
