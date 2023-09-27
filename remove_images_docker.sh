@@ -15,7 +15,7 @@ cat <<-EOF > /scripts/remove_images_docker.sh
 echo '####################################################'
 echo 'Removing images ...'
 echo '####################################################'
-docker rmi $(docker images -q)
+docker rmi "\$(docker images -q)"
 EOF
 chmod 777 /scripts/remove_images_docker.sh
 
