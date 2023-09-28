@@ -20,7 +20,7 @@ ZIP_FILENAME="$NAME_SERVER.tar.gz"
 # Compacta os arquivos em um arquivo TAR
 ls $SOURCE_DIR >/tmp/ARQ.txt
 while read I;do
-  tar -zvcf "$WORK_DIR/$ZIP_FILENAME.tar.gz" "$SOURCE_DIR/$I"
+  tar -zvcf "$WORK_DIR/$ZIP_FILENAME" "$SOURCE_DIR/$I"
   TAMANHO=`du -ch "$WORK_DIR/$ZIP_FILENAME" | grep total | awk -F" " '{print $1}'`
   echo -e "$TAMANHO\n" >> /tmp/log.txt
 done </tmp/ARQ.txt
