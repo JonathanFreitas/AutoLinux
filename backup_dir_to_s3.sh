@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
     echo "Arquivo $ZIP_FILENAME foi enviado com sucesso para o S3."
     
     # Remova o arquivo ZIP local após o envio
-    rm "$ZIP_FILENAME"
+    rm "$WORK_DIR/$ZIP_FILENAME"
   else
     echo "Erro ao enviar o arquivo $ZIP_FILENAME para o S3."
   fi
