@@ -17,7 +17,7 @@ ls $SOURCE_DIR >/tmp/ARQ.txt
 while read I;do
   tar -zvcf "$WORK_DIR/$ZIP_FILENAME.tar.gz" "$SOURCE_DIR/$I"
   TAMANHO=`du -ch "$WORK_DIR/$ZIP_FILENAME.tar.gz" | grep total | awk -F" " '{print $1}'`
-  echo -e "$I-$DATA.tar.gz ... $TAMANHO\n" >> /tmp/log.txt
+  echo -e "$TAMANHO\n" >> /tmp/log.txt
 done </tmp/ARQ.txt
 rm -Rf /tmp/ARQ.txt
 
