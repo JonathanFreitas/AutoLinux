@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Nome da stack que você deseja verificar
+STACK_NAME="name-stack"
+
+# Verifica se a stack já existe
+if docker stack ls | grep -q "$STACK_NAME"; then
+  echo "A stack '$STACK_NAME' já está criada."
+else
+  echo "A stack '$STACK_NAME' não foi encontrada. Criando agora..."
+  # Comando de criação da stack
+  #docker stack deploy -c /caminho/do/seu/arquivo/docker-compose.yml $STACK_NAME
+  echo 'crinado Stack'
+fi
