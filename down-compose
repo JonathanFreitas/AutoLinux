@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+# Verifica se a variável foi passada como argumento
+if [ $# -eq 0 ]; then
+  echo "Você não forneceu a variável como argumento."
+  exit 1
+fi
+
+# Armazena o primeiro argumento na variável
+ARQUIVO_MANTIDO="$1"
+TOKEN_GITHUB="$2"
+PATH_FINAL="$3"
+
+# URL do repositório Git
+REPO_URL="https://$TOKEN_GITHUB@github.com/AutoCrivo/ac-source-code.git"
+
+# Diretório temporário para clonar o repositório
+TEMP_DIR=$(mktemp -d)
+
+# Realiza o clone do repositório sem criar uma pasta específica
+git clone --depth 1 "$REPO_URL" "$TEMP_DIR"
+
+# Remove todos os arquivos, exceto o arquivo especificado
+cd "$TEMP_DIR" || exit
+shopt -s extglob
+
+rm -rf !("$ARQUIVO_MANTIDO")
+
+# Move o arquivo mantido para o diretório atual (opcional)
+mv "$ARQUIVO_MANTIDO" $PATH_FINAL
+
+# Retorna para o diretório anterior e remove o diretório temporário
+cd - || exit
+rm -rf "$TEMP_DIR"
