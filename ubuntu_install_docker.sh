@@ -19,3 +19,8 @@ apt-cache policy docker-ce
 echo "instalando !"
 sudo apt install docker-ce -y
 echo "Instalacao concluida!!"
+newgrp docker;
+su ubuntu;
+sudo usermod -aG docker ${USER} ;
+sudo su root;
+echo 'Instalacao concluida!'
