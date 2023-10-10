@@ -1,0 +1,9 @@
+service sshd restart
+sudo adduser tiago
+sudo echo "2eBzBBSixk" | passwd "tiago" --stdin
+sudo usermod -aG wheel tiago
+sudo echo "tiago ALL=(ALL)       NOPASSWD:ALL" >> /etc/sudoers
+
+
+#sudo passwd tiago
+
