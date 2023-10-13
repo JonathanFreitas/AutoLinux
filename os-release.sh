@@ -12,12 +12,14 @@ distro_description=$(lsb_release -d 2>/dev/null | cut -f2-)
 # Verifica se a descrição contém "Ubuntu"
 if [[ "$distro_description" == *"Ubuntu"* ]]; then
     echo "O sistema está executando o Ubuntu."
+    echo 'comandos em ubuntu'
     exit 0
 fi
 
 # Verifica se a descrição contém "CentOS"
 if [[ "$distro_description" == *"CentOS"* ]]; then
     echo "O sistema está executando o CentOS."
+    echo 'comandos em centos'
     exit 0
 fi
 
