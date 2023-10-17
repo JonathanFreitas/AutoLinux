@@ -1,5 +1,15 @@
 #!/bin/bash
 
+oracle_release_file="/etc/oracle-release"
+
+if [ -e "$oracle_release_file" ]; then
+  release_info=$(cat "$oracle_release_file")
+  echo "Você está usando o Oracle Linux. Versão: $release_info"
+else
+  echo "Não foi possível encontrar o arquivo de release do Oracle Linux em $oracle_release_file."
+fi
+
+
 # Verifica se o comando lsb_release está disponível
 if ! command -v lsb_release &> /dev/null; then
     echo "O comando lsb_release não está disponível. Este script requer o pacote 'lsb-release' para funcionar."
