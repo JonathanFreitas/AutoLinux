@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Comandos para atualizar o Jenkins
+
+#criar backup
+cp /usr/share/java/jenkins.war ~/jenkins.war.old
+
+#Parar serviço
+service jenkins stop
+
+cd /usr/share/java/
+
+#baixar nova versao
+wget wget https://updates.jenkins-ci.org/download/war/2.430/jenkins.war
+
+#Rodar serviço 
+service jenkins start
