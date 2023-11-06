@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+# Diretório que contém a chave PEM
+PEM_DIR="./pem"
+
+# Comandos que você deseja executar em cada servidor
+COMMANDS=(
+      mkdir -p /scripts/
+      cat <<-EOF > /scripts/remove-all-images.sh
+#!/bin/bash
+###########################################
+#
+# clean/remove all container/images
+#
+# The script will
+#  - remove images
+#
+
+
+# remove all images
+echo '####################################################'
+echo 'Removing images ...'
+echo '####################################################'
+docker rmi $(docker images -q)
+      '
+      
+
+)
+
+# Loop para acessar cada servidor e executar os comandos
+while IFS= read -r IP; do
+  echo "Acessando o servidor $IP"
+  ping -c 2 $IP
+  for CMD in "${COMMANDS[@]}"; do
+    ssh -i "${PEM_DIR}/oracleredeok.pem" -p22 root@$IP "$CMD"
+  done
+
+  echo "Comandos executados no servidor $IP"
+done < "lista_ips.txt"
