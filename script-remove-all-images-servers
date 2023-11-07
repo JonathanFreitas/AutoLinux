@@ -6,24 +6,11 @@ PEM_DIR="./pem"
 
 # Comandos que você deseja executar em cada servidor
 COMMANDS=(
-      mkdir -p /scripts/
-      cat <<-EOF > /scripts/remove-all-images.sh
-#!/bin/bash
-###########################################
-#
-# clean/remove all container/images
-#
-# The script will
-#  - remove images
-#
-
-
-# remove all images
-echo '####################################################'
-echo 'Removing images ...'
-echo '####################################################'
-docker rmi $(docker images -q)
-      '
+      curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash ;
+      sleep 2;
+      echo 'Feito! crontab';
+      crontab -l;
+      
       
 
 )
