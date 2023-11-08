@@ -6,10 +6,10 @@ PEM_DIR="./pem"
 
 # Comandos que você deseja executar em cada servidor
 COMMANDS=(
-      curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash ;
-      sleep 2;
-      echo 'Feito! crontab';
-      crontab -l;
+      "curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash ;"
+      "sleep 2;"
+      "echo 'Feito! crontab';"
+      "crontab -l;"
       
       
 
