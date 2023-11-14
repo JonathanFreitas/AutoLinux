@@ -1,0 +1,11 @@
+# usando cfdisk para criar a partiçao primaria
+#cfdisk
+
+#comandos para criar LVM volume logico
+
+sudo pvcreate /dev/sdb1
+sudo pvdisplay
+sudo vgcreate vg-data /dev/sdb1
+sudo lvcreate --name lv-data -l 100%FREE vg-data
+sudo mkfs.xfs /dev/vg-data/lv-data
+
