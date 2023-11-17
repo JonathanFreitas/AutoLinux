@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Substitua essas variáveis com os valores apropriados
+ZONA_DESTINO_ID="Z07561923W1WKHX1J2YMP"
+ARQUIVO_JSON="./pixcred-vc.json"
+
+# Lista de registros do arquivo JSON
+REGISTROS=$(jq -c '.ResourceRecordSets[]' "$ARQUIVO_JSON")
+
+# Itera sobre cada registro e cria um comando de alteração
+for REGISTRO in $REGISTROS; do
+    aws route53 change-resource-record-sets --hosted-zone-id $ZONA_DESTINO_ID --change-batch \
+        "{\"Changes\":[{\"Action\":\"UPSERT\",\"ResourceRecordSet\":$REGISTRO}]}"
+done
+
+
+
+################## EXPORT  ############################
+aws route53 list-resource-record-sets --hosted-zone-id Z0DFDFHHG6304293IIHYBBMEB1CQ --output json > NAME.json
