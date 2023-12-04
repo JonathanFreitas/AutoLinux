@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Substitua essas variáveis com os valores apropriados
-ZONA_DESTINO_ID="Z07561923W1WKHX1J2YMP"
-ARQUIVO_JSON="./pixcred-vc.json"
+ZONA_DESTINO_ID=""
+ARQUIVO_JSON="."
 
 # Lista de registros do arquivo JSON
 REGISTROS=$(jq -c '.ResourceRecordSets[]' "$ARQUIVO_JSON")
