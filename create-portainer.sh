@@ -68,7 +68,7 @@ volumes:
   portainer_data:
 
 EOF
-
-docker stack deploy -c /scripts/configs/portainer-agent-stack.yml portainer
+cd /scripts/configs/
+docker stack deploy -c portainer-agent-stack.yml portainer
 echo 'config task limit 1'
 docker swarm update --task-history-limit=1
