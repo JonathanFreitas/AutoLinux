@@ -6,7 +6,7 @@
 NAME_SERVER=""
 SOURCE_DIR="/opt"
 WORK_DIR="/tmp"
-S3_BUCKET="bkp-mercadolegal-lightsail"
+S3_BUCKET="bkp-"
 S3_PREFIX="$NAME_SERVER"
 
 # Nome do arquivo ZIP a ser criado ZIP
