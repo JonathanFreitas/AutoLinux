@@ -20,7 +20,7 @@ while IFS= read -r IP; do
   echo "Acessando o servidor $IP"
   ping -c 2 $IP
   for CMD in "${COMMANDS[@]}"; do
-    ssh -i "${PEM_DIR}/oracleredeok.pem" -p22 root@$IP "$CMD"
+    ssh -i "${PEM_DIR}" -p22 root@$IP "$CMD"
   done
 
   echo "Comandos executados no servidor $IP"
