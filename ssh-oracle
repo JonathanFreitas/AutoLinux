@@ -1,14 +1,1 @@
-echo -e "\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVWXsitiW/NvnzVQqDjOz52ljeqOcVS16UTQHhCr2U+r4gy2HO/OXm7YvX/+n81Ahs3gYol/RZ/1kqCP02SYuKhWxqyoxa5+LlSlPHB8qWSicdzwXxeRHEYTvYQAmUWAn+dz8qW6TH+J6sF+j/g1RdU/I6mJxyf2eBzBBSixkGQ6PkN8NqXLNjJgzi8b4Z+h8k0S3VONNFCHrSznBo9KS5x/3YCZW66leWoqNUhPZguaiUlhVmB7J6kgv3a7KuV/j9JBMR7jNx5yAmiueRy24gC0q2SVg0f+V/koYK4OhYLn9ZBPjAto5rmGOvtoRirLmHaQYpVe7zA1hH0MyxJn8t oracleredeok" >> .ssh/authorized_keys
-service sshd restart
-sudo adduser tiago
-sudo echo "" | passwd "tiago" --stdin
-sudo usermod -aG wheel tiago
-sudo echo "tiago ALL=(ALL)       NOPASSWD:ALL" >> /etc/sudoers
 
-#########  UBUNTU  #########################################
-
-echo -e "\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVWXsitiW/NvnzVQqDjOz52ljeqOcVS16UTQHhCr2U+r4gy2HO/OXm7YvX/+n81Ahs3gYol/RZ/1kqCP02SYuKhWxqyoxa5+LlSlPHB8qWSicdzwXxeRHEYTvYQAmUWAn+dz8qW6TH+J6sF+j/g1RdU/I6mJxyf2eBzBBSixkGQ6PkN8NqXLNjJgzi8b4Z+h8k0S3VONNFCHrSznBo9KS5x/3YCZW66leWoqNUhPZguaiUlhVmB7J6kgv3a7KuV/j9JBMR7jNx5yAmiueRy24gC0q2SVg0f+V/koYK4OhYLn9ZBPjAto5rmGOvtoRirLmHaQYpVe7zA1hH0MyxJn8t oracleredeok" >> .ssh/authorized_keys
-service sshd restart
-adduser tiago
-usermod -aG sudo tiago
-sudo echo "tiago ALL=(ALL)       NOPASSWD:ALL" >> /etc/sudoers
