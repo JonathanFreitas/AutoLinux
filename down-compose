@@ -13,7 +13,7 @@ TOKEN_GITHUB="$2"
 PATH_FINAL="$3"
 
 # URL do repositório Git
-REPO_URL="https://$TOKEN_GITHUB@github.com/AutoCrivo/ac-source-code.git"
+REPO_URL="https://$TOKEN_GITHUB"
 
 # Diretório temporário para clonar o repositório
 TEMP_DIR=$(mktemp -d)
