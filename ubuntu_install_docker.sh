@@ -2,6 +2,8 @@
 echo "Iniciando instalacao"
 #### Instalação de Requisitos
 apt-get update -y 
+echo 'Configurando TIMEZONE!!!!!'
+timedatectl set-timezone America/Bahia
 echo "1 update concluido!!"
 apt-get update -y && apt-get upgrade -y && apt-get install ca-certificates curl gnupg lsb-release -y
 
