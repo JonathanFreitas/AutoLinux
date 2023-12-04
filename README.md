@@ -5,7 +5,7 @@ Autor: Jonathan Freitas
 Versao: BETA
 
 
-Desenvolvido para atenter instalações recorrentes, de forma pratica e automatizada!
+Desenvolvido para atender instalações recorrentes, de forma pratica e automatizada!
 
 Como Usar:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/hello_world.sh | bash </pre>
