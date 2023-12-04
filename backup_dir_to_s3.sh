@@ -3,7 +3,7 @@
 # Data: 28/09/2023
 
 # Defina as variáveis de origem e destino
-NAME_SERVER="MercadoLegalFullSize"
+NAME_SERVER=""
 SOURCE_DIR="/opt"
 WORK_DIR="/tmp"
 S3_BUCKET="bkp-mercadolegal-lightsail"
