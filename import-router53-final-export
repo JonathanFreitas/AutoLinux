@@ -2,7 +2,7 @@
 
 # Substitua essas variáveis com os valores apropriados
 ZONA_DESTINO_ID=""
-ARQUIVO_JSON="."
+ARQUIVO_JSON=""
 
 # Lista de registros do arquivo JSON
 REGISTROS=$(jq -c '.ResourceRecordSets[]' "$ARQUIVO_JSON")
