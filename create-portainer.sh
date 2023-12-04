@@ -72,3 +72,5 @@ cd /scripts/configs/
 docker stack deploy -c portainer-agent-stack.yml portainer
 echo 'config task limit 1'
 docker swarm update --task-history-limit=1
+echo 'gravando token-join-swarm in: /scripts/configs/token-join'
+docker swarm join-token worker > token-join
