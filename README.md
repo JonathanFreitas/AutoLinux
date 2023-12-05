@@ -27,6 +27,9 @@ Instalando Portainer:
 Marca Profissional:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/marca-profissional | bash </pre>
 
+Acesso SSH por Senha ROOT:
+<pre class="prettyprint lang-sh"> https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ssh-liberar-por-senha </pre>
+
 
 A automação desempenha um papel vital na otimização e melhoria de processos em diversas áreas. 
 Ao substituir tarefas manuais e repetitivas por sistemas automatizados, ganhamos eficiência, precisão e velocidade. 
