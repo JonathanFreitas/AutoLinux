@@ -24,6 +24,8 @@ Memoria Ram dinamica:
 Instalando Portainer:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/create-portainer.sh | bash </pre>
  
+Marca Profissional:
+<pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/marca-profissional | bash </pre>
 
 
 A automação desempenha um papel vital na otimização e melhoria de processos em diversas áreas. 
