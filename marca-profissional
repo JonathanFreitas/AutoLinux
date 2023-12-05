@@ -1,0 +1,37 @@
+#!/bin/bash
+echo 'So Roda com SUDO'
+sudo su - root
+echo 'verificando se estou como SUDO'
+if [ "$(whoami)" != "root" ]; then
+    echo "Você não está executando como root (sudo). Execute com sudo."
+    exit 1
+fi
+
+echo 'Iniciando....'
+sleep 2
+
+cat <<'EOF' > /etc/motd
+  _
+/\_ \    __
+\//\ \  /\_\    ___   __  __  __  _
+  \ \ \ \/\ \ /' _ `\/\ \/\ \/\ \/'\
+   \_\ \_\ \ \/\ \/\ \ \ \_\ \/>  </
+   /\____\\ \_\ \_\ \_\ \____//\_/\_\
+   \/____/ \/_/\/_/\/_/\/___/ \//\/_/
+#-------------------------------A T E N C A O----------------------------#
+#                                                                        #
+# => ACESSO PERMITIDO SOMENTE A PESSOAS AUTORIZADAS!                     #
+#                                                                        #
+# => CASO NAO TENHA AUTORIZACAO FACA LOGOUT AGORA!                       #
+#                                                                        #
+# => TODAS AS ACOES ESTAO SENDO MONITORADAS!                             #
+#                                                                        #
+# => AO ACESSAR ESTE EQUIPAMENTO VOCE ESTA CONCORDANDO COM               #
+#    O PROCESSO DE MONITORACAO E ESTAH SUJEITO AS SANCOES                #
+#    LEGAIS APLICAVEIS!                                                  #
+#                                                                        #
+#-------------------------------A T E N C A O----------------------------#
+
+EOF
+
+echo 'Finalizado!!'
