@@ -30,7 +30,7 @@ Marca Profissional:
 Acesso SSH por Senha ROOT:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ssh-liberar-por-senha | bash </pre>
 
-Acesso SSH por Senha ROOT:
+Instalando Jenkins:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/Install-Jenkins | bash </pre>
 
 A automação desempenha um papel vital na otimização e melhoria de processos em diversas áreas. 
