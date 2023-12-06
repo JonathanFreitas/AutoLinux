@@ -1,1 +1,46 @@
+#!/bin/bash
 
+echo 'So Roda com SUDO'
+sudo su - root
+echo 'verificando se estou como SUDO'
+if [ "$(whoami)" != "root" ]; then
+    echo "Você não está executando como root (sudo). Execute com sudo."
+    exit 1
+fi
+
+echo 'Iniciando....'
+
+apt update -y
+
+echo 'Install JDK JAVA'
+apt install openjdk-17-jdk -y
+
+
+
+echo 'First, add the repository key to the system'
+#wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+sleep 1
+
+echo 'Next, let’s append the Debian package repository address to the server’s sources.list'
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]  https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+echo 'update'
+sudo apt update
+
+echo 'Install JenKins'
+sudo apt install jenkins
+
+sudo systemctl enable jenkins
+
+sudo systemctl start jenkins
+
+echo 'STATUS SERVICE'
+
+sudo systemctl status jenkins
+
+echo 'Pegando Password defalut'
+sleep 5
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
