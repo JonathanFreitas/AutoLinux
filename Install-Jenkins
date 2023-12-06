@@ -10,7 +10,7 @@ fi
 
 echo 'Iniciando....'
 
-apt update -y
+apt-get update -y && apt-get upgrade -y && apt-get install ca-certificates curl gnupg lsb-release -y
 
 echo 'Install JDK JAVA'
 apt install openjdk-17-jdk -y
