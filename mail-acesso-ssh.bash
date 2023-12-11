@@ -34,7 +34,7 @@ rootalert() {
   uptime
   echo
 }
-rootalert | mail -s "Alerta: Acesso via SSH [hostname]" monitoramento.aws@emepar.com.br jonathan@grupo2ag.com.br thiago@delend.finance
+rootalert | mail -s "Alerta: Acesso via SSH [hostname]" teste@gmail.comc.casn
 EOF
 
 sudo chmod 777 /etc/profile.adm
