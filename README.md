@@ -33,6 +33,9 @@ Acesso SSH por Senha ROOT:
 Instalando Jenkins:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/Install-Jenkins | bash </pre>
 
+Email SSH ACESSO:
+<pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/mail-acesso-ssh.bash | bash </pre>
+
 A automação desempenha um papel vital na otimização e melhoria de processos em diversas áreas. 
 Ao substituir tarefas manuais e repetitivas por sistemas automatizados, ganhamos eficiência, precisão e velocidade. 
 Isso não apenas reduz erros humanos, mas também libera recursos para tarefas mais criativas e estratégicas. 
