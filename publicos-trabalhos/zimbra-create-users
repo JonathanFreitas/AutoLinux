@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Senha estática para todos os usuários
+STATIC_PASSWORD="sua_senha_fixa"
+
+# Arquivo de usuários
+USERS_FILE="usuarios.txt"
+
+# Verifica se o arquivo de usuários existe
+if [ ! -f "$USERS_FILE" ]; then
+    echo "Arquivo de usuários não encontrado."
+    exit 1
+fi
+
+# Loop para criar os usuários
+while IFS= read -r user; do
+    if [ -n "$user" ]; then
+        # Executa o comando zmprov para criar o usuário com a senha estática
+        zmprov ca "$user" "$STATIC_PASSWORD"
+        echo "Usuário $user criado com senha estática."
+    else
+        echo "Usuário inválido."
+    fi
+done < "$USERS_FILE"
+
+echo "Concluído."
