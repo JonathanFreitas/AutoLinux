@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+#Autor: Jonathan Fretas
+#Data: 21/02/2024
+
+#Domínios estaticos
+dominio1="@seuemail1"
+dominio2="@seuemail1"
+
+#Senhas
+senha1="sua-senha"
+senha2="sua-senha"
+
+#Caminho dos arquivos de e-mail
+emails1_file="./emails1.txt"
+emails2_file="./emails2.txt"
+
+#Caminho do script imapsync
+imapsync_script="/root/github/imapsync/imapsync"
+
+log_file="/tmp/imapsync-log-execucao.log"
+
+#Apagando o ANTIGO
+rm -Rf /tmp/imapsync-log-execucao.log
+
+while IFS= read -r email1 && IFS= read -r email2 <&3; do
+
+     $imapsync_script --useheader 'Message-Id' --addheader --host1 "$dominio1" --user1 "$email1" --password1 "$senha1" --host2 "$dominio2" --user2 "$email2" --password2 "$senha2"  --nosslcheck >> "$log_file" 2>&1
+        echo "Feito: " + $email1 + " . " +  $email2
+
+
+done < "$emails1_file" 3< "$emails2_file"
