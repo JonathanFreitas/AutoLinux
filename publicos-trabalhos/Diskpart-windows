@@ -1,0 +1,19 @@
+Formatando pendriver via cmd
+
+###Ferramenta windows
+diskpart
+
+###selecionando disco
+select disk [number-disk]
+
+###Limpando estrutura
+clean
+
+###criando partiçao primaria
+create partition primary
+
+###formatando
+format fs=ntfs ou format fs=fat32
+
+###Assinando letra no driver
+assign
