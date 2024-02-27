@@ -18,6 +18,9 @@ Instalar Docker Ultima Versao:
  Instalar Clean Images Docker:
  <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_images_docker.sh | bash </pre>
 
+ Remover tudo sem uso Docker:
+ <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/remove_all_docker.sh | bash </pre>
+
 Memoria Ram dinamica:
 <pre class="prettyprint lang-sh"> curl -o ram.sh https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/mount_ram_memory.sh; chmod 777 ram.sh; ./ram.sh </pre>
 
