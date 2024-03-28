@@ -1,0 +1,35 @@
+Se você deseja instalar uma versão específica do Node.js no Ubuntu Server 20.04 via linha de comando, você pode usar o gerenciador de versões nvm (Node Version Manager). Aqui estão os passos para instalar o nvm e usar para instalar o Node.js na versão desejada:
+
+Instale o nvm:
+
+Execute o seguinte comando para baixar e instalar o nvm:
+
+bash
+Copy code
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+Este comando irá baixar e executar o script de instalação do nvm.
+
+Reinicie o Terminal ou Execute o Comando de Configuração:
+
+Após a instalação do nvm, você precisa reiniciar o terminal ou executar o comando de configuração para que o nvm seja reconhecido. Você pode executar o seguinte comando:
+
+bash
+Copy code
+source ~/.bashrc
+Instale a Versão Desejada do Node.js:
+
+Agora que o nvm está instalado, você pode usar o comando nvm install para instalar a versão específica do Node.js que deseja. Por exemplo, para instalar o Node.js 20.5.1, você pode fazer o seguinte:
+
+bash
+Copy code
+nvm install 20.5.1
+Verifique se a Instalação foi Bem-Sucedida:
+
+Após a instalação, você pode verificar se a versão correta do Node.js foi instalada executando:
+
+bash
+Copy code
+node --version
+Isso deve mostrar a versão do Node.js que você acabou de instalar.
+
+Agora você tem o Node.js na versão 20.5.1 instalado no seu Ubuntu Server 20.04 usando o nvm. Este método permite que você instale facilmente diferentes versões do Node.js e alterne entre elas conforme necessário.
