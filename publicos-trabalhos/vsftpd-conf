@@ -1,0 +1,9 @@
+# Habilitar o modo de acesso somente para usuários específicos
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO
+
+# Definir o intervalo de portas passivas
+pasv_enable=YES
+pasv_min_port=40000
+pasv_max_port=50000
