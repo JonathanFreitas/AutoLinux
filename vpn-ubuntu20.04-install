@@ -1,6 +1,7 @@
+echo "Iniciando...."
+echo "Diretorio de origem /home/ubuntu/openvpn-install.sh"
 
-
-
+cat <<'EOF' > /home/ubuntu/openvpn-install.sh
 #!/bin/bash
 #
 # https://github.com/Nyr/openvpn-install
@@ -462,3 +463,8 @@ verb 3" > /etc/openvpn/server/client-common.txt
         echo "Your client configuration is available at:" ~/"$client.ovpn"
         echo "If you want to add more clients, just run this script again!"
 fi
+EOF
+
+echo "PROXIMOS PASSOS"
+echo "chmod +x openvpn-install.sh"
+echo "bash openvpn-install.sh"
