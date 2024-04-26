@@ -39,6 +39,10 @@ Instalando Jenkins:
 Email SSH ACESSO:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/mail-acesso-ssh.bash | bash </pre>
 
+OPENVPN INSTALL 5 MIN:
+<pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/vpn-ubuntu20.04-install | bash </pre>
+
+
 PAGINA DE MANUTENÇÃO:
 <pre class="prettyprint lang-sh"> git clone https://github.com/tadwohlrapp/simple-maintenance-page.git ./ </pre>
 
