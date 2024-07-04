@@ -1,0 +1,24 @@
+#!/bin/bash
+echo 'So Roda com SUDO'
+sudo su - root
+echo 'verificando se estou como SUDO'
+if [ "$(whoami)" != "root" ]; then
+    echo "Você não está executando como root (sudo). Execute com sudo."
+    exit 1
+fi
+
+echo 'Iniciando....'
+echo 'Feito para ubuntu server 22.04'
+sleep 2
+
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+touch /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+
+echo 'Restart Service SSH'
+sudo service sshd restart
+echo "altere a senha do root: comando passwd"
+
+echo 'finalizado!!!'
