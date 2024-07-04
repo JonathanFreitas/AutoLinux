@@ -30,8 +30,13 @@ Instalando Portainer:
 Marca Profissional:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/marca-profissional | bash </pre>
 
-Acesso SSH por Senha ROOT:
+Acesso SSH por Senha ROOT (UBUNRU SERVER 20.04):
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/ssh-liberar-por-senha | bash </pre>
+
+
+Acesso SSH por Senha ROOT (Atualizado) UBUNTU SERVER 22.04:
+<pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/acess_ssh_22.04 | bash </pre>
+
 
 Instalando Jenkins:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/Install-Jenkins | bash </pre>
