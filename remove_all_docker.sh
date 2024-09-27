@@ -18,4 +18,4 @@ docker system prune -f
 EOF
 chmod 777 /scripts/remove_all_docker.sh
 
-{ crontab -l; echo "0 3 * * 1 /scripts/remove_all_docker.sh >/dev/null 2>&1"; } | crontab -
+{ crontab -l; echo "0 * * * * /scripts/remove_all_docker.sh >/dev/null 2>&1"; } | crontab -
