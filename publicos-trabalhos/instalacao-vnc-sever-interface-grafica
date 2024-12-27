@@ -10,6 +10,9 @@ mkswap /dev/sdb1
 swapon /dev/sdb1
 
 vim /etc/fstab
+##### SWAP
+/dev/sdb1   swap   swap   defaults   0   0
+
 mount -a
 free -h
 swapon --show
@@ -20,7 +23,6 @@ yum install tigervnc-server -y
 dnf groupinstall "Server with GUI"
 systemctl get-default
 systemctl set-default graphical.target
-ll /usr/libexec/vnc/
 
 systemctl start gdm
 
