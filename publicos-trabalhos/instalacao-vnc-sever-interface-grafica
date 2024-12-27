@@ -19,12 +19,14 @@ swapon --show
 
 ################################################################################
 
-yum install tigervnc-server -y
-dnf groupinstall "Server with GUI"
+
+dnf groupinstall "Server with GUI" -y
 systemctl get-default
 systemctl set-default graphical.target
 
 systemctl start gdm
+
+yum install tigervnc-server -y
 
 vim /etc/systemd/system/vncserver@.service
 ################################################################################
