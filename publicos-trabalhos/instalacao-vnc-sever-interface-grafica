@@ -1,0 +1,50 @@
+groupadd oinstall
+groupadd dba
+useradd -g oinstall -G dba oracle
+passwd oracle
+
+################ SWAP SE PRECISAR ##############################################
+cfdisk /dev/sdb
+fdisk -l
+mkswap /dev/sdb1
+swapon /dev/sdb1
+
+vim /etc/fstab
+mount -a
+free -h
+swapon --show
+
+################################################################################
+
+yum install tigervnc-server -y
+dnf groupinstall "Server with GUI"
+systemctl get-default
+systemctl set-default graphical.target
+ll /usr/libexec/vnc/
+
+systemctl start gdm
+
+vim /etc/systemd/system/vncserver@.service
+################################################################################
+[Unit]
+Description=Start VNC server at startup
+After=graphical.target
+
+[Service]
+Type=forking
+User=oracle
+PAMName=login
+PIDFile=/home/oracle/.vnc/%H:%i.pid
+ExecStart=/usr/bin/vncserver :%i -geometry 1280x1024 -depth 24
+ExecStop=/usr/bin/vncserver -kill :%i
+
+[Install]
+WantedBy=multi-user.target
+##################################################################################
+systemctl daemon-reload
+systemctl enable vncserver@:1
+systemctl start vncserver@:1
+journalctl -xe
+sudo -u oracle vncserver :1
+yum install net-tools -y
+netstat -tulpn
