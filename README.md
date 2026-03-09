@@ -49,7 +49,6 @@ OPENVPN INSTALL 5 MIN:
 
 
 
-
 ORACLE FULL SERVICE IPTABLES CLEAN:
 <pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/refs/heads/main/script-service-full-iptables-oracle.sh | bash  </pre>
 
