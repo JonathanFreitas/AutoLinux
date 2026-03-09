@@ -12,18 +12,23 @@ sleep 2
 cat <<'EOF' >  /usr/local/bin/reset-firewall.sh
 #!/bin/bash
 # Resetando todas as regras iptables
-iptables -F
-iptables -X
-iptables -Z
-iptables -t nat -F
-iptables -t nat -X
-iptables -t nat -Z
-iptables -t mangle -F
-iptables -t mangle -X
-iptables -t mangle -Z
-iptables -P INPUT ACCEPT
-iptables -P FORWARD ACCEPT
-iptables -P OUTPUT ACCEPT
+sudo iptables -F
+sudo iptables -X
+sudo iptables -Z
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+sudo iptables -t nat -Z
+sudo iptables -t mangle -F
+sudo iptables -t mangle -X
+sudo iptables -t mangle -Z
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+
+
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
 EOF
 
 echo 'Torne executável'
