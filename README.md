@@ -48,6 +48,12 @@ OPENVPN INSTALL 5 MIN:
 <pre class="prettyprint lang-sh">  curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/main/vpn-ubuntu20.04-install | bash </pre>
 
 
+
+
+ORACLE FULL SERVICE IPTABLES CLEAN:
+<pre class="prettyprint lang-sh"> curl -s https://raw.githubusercontent.com/JonathanFreitas/AutoLinux/refs/heads/main/script-service-full-iptables-oracle.sh | bash  </pre>
+
+
 PAGINA DE MANUTENÇÃO:
 <pre class="prettyprint lang-sh"> git clone https://github.com/tadwohlrapp/simple-maintenance-page.git ./ </pre>
 
